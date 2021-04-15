@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Stimulator2</string>
+
+    <string name="ip_device">192.168.0.22</string>
+    <string name="ip_sync_device">192.168.0.23</string>
+
+    <string name="device_label_signal">Signal</string>
+    <string name="device_label_strength"><![CDATA[Strength <0–31>]]></string>
+    <string name="device_label_start"><![CDATA[Start <0–240>]]></string>
+    <string name="device_label_stop"><![CDATA[Stop <0–240>]]></string>
+    <string name="device_label_test">Test</string>
+    <string name="device_name">Device %1$d</string>
+
+    <string name="devices_speed_label">Speed [%]</string>
+    <string name="devices_start_motor">Start</string>
+    <string name="devices_stop_motor">Stop</string>
+    <string name="devices_start_imp">Start IMP</string>
+    <string name="devices_stop_imp">Stop IMP</string>
+    <string name="devices_next">Next</string>
+    <string name="devices_russian">Russian</string>
+    <string name="devices_single_pulse">Single-pulse</string>
+    <string name="devices_connection_status_sync_master_error">Sync&amp;Master error</string>
+    <string name="devices_connection_status_master_error">Master error</string>
+    <string name="devices_connection_status_sync_error">Sync error</string>
+    <string name="devices_connection_status_exception_error">Something went wrong</string>
+    <string name="devices_connection_status_success">Communication OK</string>
+    <string name="devices_com_error_start">Communication error detected. Cannot start/stop stimulator.</string>
+
+</resources>

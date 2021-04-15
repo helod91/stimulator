@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="grid_1">8dp</dimen>
+    <dimen name="grid_2">16dp</dimen>
+    <dimen name="grid_3">24dp</dimen>
+
+    <dimen name="ts_1">12sp</dimen>
+    <dimen name="ts_2">14sp</dimen>
+    <dimen name="ts_3">16sp</dimen>
+    <dimen name="ts_4">18sp</dimen>
+</resources>

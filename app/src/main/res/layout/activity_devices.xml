@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/devices_speed_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/grid_2"
+        app:layout_constraintBottom_toBottomOf="@id/devices_operation_modes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/devices_operation_modes">
+
+        <EditText
+            android:id="@+id/devices_speed"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="100"
+            android:hint="@string/devices_speed_label"
+            android:inputType="number"
+            app:backgroundTint="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/devices_start_motor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/grid_2"
+        android:background="@drawable/bg_button"
+        android:paddingStart="@dimen/grid_3"
+        android:paddingEnd="@dimen/grid_3"
+        android:text="@string/devices_start_motor"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/devices_operation_modes"
+        app:layout_constraintStart_toEndOf="@id/devices_speed_layout"
+        app:layout_constraintTop_toTopOf="@id/devices_operation_modes" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/devices_start_imp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/grid_2"
+        android:background="@drawable/bg_button"
+        android:paddingStart="@dimen/grid_3"
+        android:paddingEnd="@dimen/grid_3"
+        android:text="@string/devices_start_imp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/devices_operation_modes"
+        app:layout_constraintStart_toEndOf="@id/devices_start_motor"
+        app:layout_constraintTop_toTopOf="@id/devices_operation_modes" />
+
+    <TextView
+        android:id="@+id/devices_connection_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/ts_4"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/devices_operation_modes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/devices_operation_modes"
+        tools:text="Connected" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/devices_turn_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_2"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@id/devices_operation_modes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/devices_operation_modes"
+        app:srcCompat="@drawable/ic_on_off"
+        app:tint="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/devices_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/grid_2"
+        android:background="@drawable/bg_button"
+        android:paddingStart="@dimen/grid_3"
+        android:paddingEnd="@dimen/grid_3"
+        android:text="@string/devices_next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/devices_operation_modes"
+        app:layout_constraintEnd_toStartOf="@id/devices_turn_off"
+        app:layout_constraintTop_toTopOf="@id/devices_operation_modes" />
+
+    <RadioGroup
+        android:id="@+id/devices_operation_modes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/grid_2"
+        android:layout_marginEnd="@dimen/grid_2"
+        app:layout_constraintEnd_toStartOf="@id/devices_next"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/devices_mode_russian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/devices_russian" />
+
+        <RadioButton
+            android:id="@+id/devices_mode_single_pulse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/devices_single_pulse" />
+    </RadioGroup>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/devices_operation_modes">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/grid_1">
+
+
+            <LinearLayout
+                android:id="@+id/devices_top_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/devices_bottom_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/devices_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:padding="@dimen/grid_1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/devices_operation_modes" />
+</androidx.constraintlayout.widget.ConstraintLayout>
